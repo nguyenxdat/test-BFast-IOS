@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CreateTodoView" customModule="Todo_List" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.68000000000000005" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-EC-hFX" userLabel="Background" customClass="UIControl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="handleCancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xRT-Ec-db4"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mns-3U-sYf">
+                    <rect key="frame" x="30" y="267.5" width="315" height="131"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Todo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UR-ET-YYL">
+                            <rect key="frame" x="121.5" y="8" width="72" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Todo's name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-jr-MnS">
+                            <rect key="frame" x="10" y="31" width="295" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wr3-74-WBi">
+                            <rect key="frame" x="10" y="55" width="295" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-Kg-8iR">
+                            <rect key="frame" x="10" y="93" width="132.5" height="30"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="handleCancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="N4w-Al-jQX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feb-qT-W3L">
+                            <rect key="frame" x="172.5" y="93" width="132.5" height="30"/>
+                            <state key="normal" title="Save">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="handleSaveAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="VJ1-gD-74p"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Pat-Kg-8iR" firstAttribute="top" secondItem="wr3-74-WBi" secondAttribute="bottom" constant="8" id="5bD-NE-TjP"/>
+                        <constraint firstItem="feb-qT-W3L" firstAttribute="width" secondItem="Pat-Kg-8iR" secondAttribute="width" id="6Dp-EZ-2JP"/>
+                        <constraint firstItem="wr3-74-WBi" firstAttribute="top" secondItem="7D2-jr-MnS" secondAttribute="bottom" constant="8" id="Ghm-Lu-YZQ"/>
+                        <constraint firstItem="feb-qT-W3L" firstAttribute="trailing" secondItem="wr3-74-WBi" secondAttribute="trailing" id="GoK-hh-Ox3"/>
+                        <constraint firstItem="4UR-ET-YYL" firstAttribute="top" secondItem="Mns-3U-sYf" secondAttribute="top" constant="8" id="JUE-ji-M2e"/>
+                        <constraint firstItem="feb-qT-W3L" firstAttribute="leading" secondItem="Pat-Kg-8iR" secondAttribute="trailing" constant="30" id="Lsg-VM-MFY"/>
+                        <constraint firstItem="wr3-74-WBi" firstAttribute="leading" secondItem="7D2-jr-MnS" secondAttribute="leading" id="MFo-Kg-IPg"/>
+                        <constraint firstItem="4UR-ET-YYL" firstAttribute="centerX" secondItem="Mns-3U-sYf" secondAttribute="centerX" id="VWf-s9-iMg"/>
+                        <constraint firstItem="7D2-jr-MnS" firstAttribute="leading" secondItem="Mns-3U-sYf" secondAttribute="leading" constant="10" id="X1B-m4-Hyo"/>
+                        <constraint firstItem="7D2-jr-MnS" firstAttribute="top" secondItem="4UR-ET-YYL" secondAttribute="bottom" constant="5" id="f5R-DE-dCr"/>
+                        <constraint firstAttribute="trailing" secondItem="7D2-jr-MnS" secondAttribute="trailing" constant="10" id="gji-MF-TM7"/>
+                        <constraint firstItem="feb-qT-W3L" firstAttribute="top" secondItem="wr3-74-WBi" secondAttribute="bottom" constant="8" id="msb-Ij-Hf9"/>
+                        <constraint firstItem="Pat-Kg-8iR" firstAttribute="leading" secondItem="wr3-74-WBi" secondAttribute="leading" id="q08-lu-uVY"/>
+                        <constraint firstAttribute="bottom" secondItem="Pat-Kg-8iR" secondAttribute="bottom" constant="8" id="qUF-aG-j13"/>
+                        <constraint firstItem="wr3-74-WBi" firstAttribute="trailing" secondItem="7D2-jr-MnS" secondAttribute="trailing" id="rj0-q8-Mtj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Mns-3U-sYf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="16Y-QC-UKI"/>
+                <constraint firstItem="gQ7-EC-hFX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4na-oo-qOV"/>
+                <constraint firstAttribute="trailing" secondItem="gQ7-EC-hFX" secondAttribute="trailing" id="8fg-g0-aaC"/>
+                <constraint firstItem="Mns-3U-sYf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Iek-p9-uQT"/>
+                <constraint firstAttribute="trailing" secondItem="Mns-3U-sYf" secondAttribute="trailing" constant="30" id="Nmm-zW-DJ3"/>
+                <constraint firstItem="Mns-3U-sYf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Y6W-oP-RT9"/>
+                <constraint firstItem="gQ7-EC-hFX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fDh-eQ-yeW"/>
+                <constraint firstAttribute="bottom" secondItem="gQ7-EC-hFX" secondAttribute="bottom" id="lqa-Gg-cYk"/>
+            </constraints>
+            <connections>
+                <outlet property="tfTodo" destination="wr3-74-WBi" id="mhp-78-p3R"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

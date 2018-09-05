@@ -7,16 +7,39 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        setupRootViewController()
         return true
+    }
+    
+    public func setupRootViewController() {
+        var rootViewController : UIViewController
+        if (userDidLogin()) {
+            rootViewController = MainStoryboard.init().getInitialViewController()
+        }else {
+            rootViewController = LoginStoryboard.init().getInitialViewController()
+        }
+        setRoot(root: rootViewController)
+    }
+    
+    private func setRoot(root : UIViewController) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = root
+        window?.makeKeyAndVisible()
+    }
+    
+    private func userDidLogin() -> Bool {
+        return UserDefaults.standard.bool(forKey: Constant.LOGIN_SUCCESS)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
